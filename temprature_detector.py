@@ -136,9 +136,9 @@ def vision_client():
 		#print "logger.error.detected_objects: bottle_detector doesn't work! "
 if __name__ == "__main__":
 	while True:
-		#var = vision_client()
+		var = vision_client()
 		#print "var::::  ",var
 		#print "type var::::  ",type(var.text)
-		var="cup"
+		#var="cup"
 		stt_client(var)
 		raw_input('Press enter to continue: ')	

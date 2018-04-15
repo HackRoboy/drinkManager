@@ -50,7 +50,7 @@ def stt_client(var):
 			temp1 = float(temp1.strip())
 			print "temp: ",temp
 			print "temp2: ",temp2
-			if temp2-temp < float(good_coffee_temprature_diff) or temp2<30:
+			if temp2-temp < float(good_coffee_temprature_diff) :
 				print "dif: ",temp1-temp
 				resp = stt("This coffee is too cold.")
 			else:
@@ -100,7 +100,7 @@ def stt_client(var):
 			temp1 = float(temp1.strip())
 			print("temp: ",temp)
 			print "temp2: ",temp2
-			if temp2-temp < float(good_coffee_temprature_diff) or temp2<30:
+			if temp2-temp < float(good_coffee_temprature_diff):
 				print "dif: ",temp2-temp 
 				resp = stt("This coffee is too cold.")
 			else:
@@ -136,9 +136,9 @@ def vision_client():
 		#print "logger.error.detected_objects: bottle_detector doesn't work! "
 if __name__ == "__main__":
 	while True:
-		#var = vision_client()
+		var = vision_client()
 		#print "var::::  ",var
 		#print "type var::::  ",type(var.text)
-		var="beer"
+		#var="beer"
 		stt_client(var)
 		raw_input('Press enter to continue: ')	
